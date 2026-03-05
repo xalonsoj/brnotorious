@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/request';
+import type { NextRequest } from 'next/server';
 
 // This is a simple middleware to redirect unauthenticated users
 // In a real app, we might use Firebase Admin SDK for session verification,
