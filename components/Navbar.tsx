@@ -2,15 +2,17 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ShoppingBag, Search, Menu, X, Globe, CreditCard } from 'lucide-react';
+import { ShoppingBag, Search, Menu, X, Globe, CreditCard, User as UserIcon } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useCart } from "@/store/useCart";
 import { useUI } from "@/store/useUI";
+import { useAuth } from "@/context/AuthContext";
 import CurrencySwitcher from "./CurrencySwitcher";
 import { useHasHydrated } from "@/lib/hooks";
 
 export default function Navbar() {
+    const { user, isAdmin } = useAuth();
     const locale = useLocale();
     const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,6 +70,39 @@ export default function Navbar() {
                         <div className="hidden md:flex flex-col items-end gap-0.5">
                             <LocaleSwitcher />
                             <CurrencySwitcher />
+                        </div>
+
+                        {/* User / Account */}
+                        <div className="flex items-center">
+                            {user ? (
+                                <Link
+                                    href={`/${locale}/${isAdmin ? 'admin' : 'account'}`}
+                                    className="flex items-center gap-2 group"
+                                >
+                                    <span className="hidden sm:inline text-[10px] font-black uppercase tracking-[0.2em] group-hover:opacity-60 transition-opacity">
+                                        {isAdmin ? 'Admin' : t('account')}
+                                    </span>
+                                    {user.photoURL ? (
+                                        <img
+                                            src={user.photoURL}
+                                            alt={user.displayName || 'User'}
+                                            className="w-5 h-5 md:w-6 md:h-6 rounded-full border border-gray-200 dark:border-gray-800"
+                                        />
+                                    ) : (
+                                        <UserIcon className="w-5 h-5 md:w-6 md:h-6" />
+                                    )}
+                                </Link>
+                            ) : (
+                                <Link
+                                    href={`/${locale}/login`}
+                                    className="flex items-center gap-2 group"
+                                >
+                                    <span className="hidden sm:inline text-[10px] font-black uppercase tracking-[0.2em] group-hover:opacity-60 transition-opacity">
+                                        {t('login')}
+                                    </span>
+                                    <UserIcon className="w-5 h-5 md:w-6 md:h-6" />
+                                </Link>
+                            )}
                         </div>
 
                         {/* Cart */}

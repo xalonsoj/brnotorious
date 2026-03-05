@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { AuthProvider } from "@/context/AuthContext";
 import Navbar from "@/components/Navbar";
 import CartDrawer from "@/components/CartDrawer";
 import Footer from "@/components/Footer";
@@ -26,12 +27,14 @@ export default async function LocaleLayout({
                 suppressHydrationWarning
             >
                 <NextIntlClientProvider messages={messages} locale={locale}>
-                    <Navbar />
-                    <CartDrawer />
-                    <main className="min-h-screen">
-                        {children}
-                    </main>
-                    <Footer />
+                    <AuthProvider>
+                        <Navbar />
+                        <CartDrawer />
+                        <main className="min-h-screen">
+                            {children}
+                        </main>
+                        <Footer />
+                    </AuthProvider>
                 </NextIntlClientProvider>
             </body>
         </html>

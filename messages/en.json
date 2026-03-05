@@ -10,7 +10,9 @@
         "apparel": "Apparel",
         "journal": "Journal",
         "story": "Story",
-        "cart": "Cart"
+        "cart": "Cart",
+        "account": "Account",
+        "login": "Login"
     },
     "Cart": {
         "title": "Your Cart",
@@ -19,5 +21,41 @@
         "remove": "Remove",
         "total": "Total",
         "continue_shopping": "Continue Shopping"
+    },
+    "Login": {
+        "title": "Identify Yourself",
+        "subtitle": "Join the Brnotorious community to track your orders and manage your collection.",
+        "google": "Continue with Google",
+        "email_placeholder": "your@email.com",
+        "password_placeholder": "••••••••",
+        "signin": "Sign In",
+        "no_account": "Don't have an account?",
+        "signup": "Sign Up",
+        "error": "Something went wrong. Please try again."
+    },
+    "Account": {
+        "title": "My Account",
+        "signout": "Sign Out",
+        "orders": "Recent Orders",
+        "no_orders": "You haven't placed any orders yet.",
+        "view_all_orders": "View All Orders",
+        "shipping": "Shipping Info",
+        "no_address": "No address saved yet.",
+        "manage_addresses": "Manage Addresses",
+        "collection": "Your Collection",
+        "no_collection": "Save your favorite Brno-inspired items here.",
+        "explore": "Explore Shop"
+    },
+    "Admin": {
+        "title": "Admin Hub",
+        "subtitle": "Command Center / Brnotorious",
+        "quick_actions": "Quick Actions",
+        "add_product": "Add Product",
+        "orders": "Orders",
+        "customers": "Customers",
+        "settings": "Settings",
+        "revenue": "Total Revenue",
+        "active_orders": "Active Orders",
+        "realtime": "Realtime"
     }
 }

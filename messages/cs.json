@@ -10,7 +10,9 @@
         "apparel": "Oblečení",
         "journal": "Žurnál",
         "story": "Příběh",
-        "cart": "Košík"
+        "cart": "Košík",
+        "account": "Účet",
+        "login": "Přihlásit se"
     },
     "Cart": {
         "title": "Váš košík",
@@ -19,5 +21,41 @@
         "remove": "Odstranit",
         "total": "Celkem",
         "continue_shopping": "Pokračovat v nákupu"
+    },
+    "Login": {
+        "title": "Identifikujte se",
+        "subtitle": "Připojte se ke komunitě Brnotorious a sledujte své objednávky.",
+        "google": "Pokračovat s Googlem",
+        "email_placeholder": "vas@email.cz",
+        "password_placeholder": "••••••••",
+        "signin": "Přihlásit se",
+        "no_account": "Nemáte účet?",
+        "signup": "Zaregistrovat se",
+        "error": "Něco se nepovedlo. Zkuste to prosím znovu."
+    },
+    "Account": {
+        "title": "Můj Účet",
+        "signout": "Odhlásit se",
+        "orders": "Poslední objednávky",
+        "no_orders": "Zatím jste neudělali žádnou objednávku.",
+        "view_all_orders": "Zobrazit všechny objednávky",
+        "shipping": "Doručovací údaje",
+        "no_address": "Zatím nemáte uloženou adresu.",
+        "manage_addresses": "Spravovat adresy",
+        "collection": "Vaše Kolekce",
+        "no_collection": "Zde si ukládejte své oblíbené brněnské kousky.",
+        "explore": "Prozkoumat Obchod"
+    },
+    "Admin": {
+        "title": "Admin Centrum",
+        "subtitle": "Velicí Středisko / Brnotorious",
+        "quick_actions": "Rychlé Akce",
+        "add_product": "Přidat Produkt",
+        "orders": "Objednávky",
+        "customers": "Zákazníci",
+        "settings": "Nastavení",
+        "revenue": "Celkový Obrat",
+        "active_orders": "Aktivní Objednávky",
+        "realtime": "Realtime"
     }
 }
