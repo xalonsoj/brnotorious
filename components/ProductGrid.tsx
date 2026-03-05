@@ -3,7 +3,7 @@ import ProductCard from './ProductCard';
 import { Product } from '@/types/product';
 import { useLocale } from 'next-intl';
 
-export default function ProductGrid({ products = [] }: { products: Product[] }) {
+export default function ProductGrid({ products = [] }: { products?: Product[] }) {
     const locale = useLocale();
     return (
         <div className="bg-background-light dark:bg-background-dark transition-colors duration-300">
