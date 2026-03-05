@@ -1,0 +1,23 @@
+{
+    "Index": {
+        "title": "Městské kulturní artefakty",
+        "description": "Navrženo v Brně. Vytvořeno pro globální nomády. Naše tisky a oblečení oslavují brutalistní krásu a modernistickou duši našeho města.",
+        "explore": "Prozkoumat kolekci"
+    },
+    "Navigation": {
+        "shop": "Obchod",
+        "prints": "Tisky",
+        "apparel": "Oblečení",
+        "journal": "Žurnál",
+        "story": "Příběh",
+        "cart": "Košík"
+    },
+    "Cart": {
+        "title": "Váš košík",
+        "empty": "Váš košík je prázdný.",
+        "checkout": "K pokladně",
+        "remove": "Odstranit",
+        "total": "Celkem",
+        "continue_shopping": "Pokračovat v nákupu"
+    }
+}

@@ -1,0 +1,38 @@
+# Bauhausian Roadmap: The One-Person Editorial Empire
+
+This document outlines a vision to transform the Bauhausian platform into a highly automated, AI-augmented powerhouse that produces premium content with minimal manual effort.
+
+---
+
+## 🎨 1. AI-Powered Visual Mastery
+*Goal: Remove the need for external designers while maintaining a world-class aesthetic.*
+
+*   **Nano Banana Integration**: Adopt **Nano Banana** as the standard for prompt-based and reference-based image generation. Lightning-fast creation of studio-quality Bauhaus visuals.
+*   **Branding & Image Editor (Future)**: A basic in-app editor to add consistent branding elements (logos, color overlays) and typography to uploaded or generated images.
+*   **AI-Driven Layouts (Branch Test)**: Experiment with dynamic content arrangements in a dedicated test branch to ensure structural precision doesn't sacrifice aesthetic flexibility.
+
+## ✍️ 2. Content Amplification (The "Multi-Person" Illusion)
+*Goal: Turn one article into an entire content ecosystem automatically.*
+
+*   **Social "Share-Pack" Generator**: Expand the generator to include specific kits for:
+    *   **Instagram**: Visual-first captions and branding suggestions.
+    *   **Bluesky**: Concise, high-signal snippets for the decentralized web.
+    *   **X (Twitter)** & **LinkedIn**.
+*   **Gemini Audio (multimodal)**: Use **Gemini 2.5 Flash** to generate high-quality audio versions of essays. A "Listen" button on every page to provide a premium, accessible experience.
+*   **Smart Internal Linking**: Proactive suggestions to link new drafts to existing Archive/Essay nodes, increasing site authority.
+
+## 🚀 3. Workflow Automation & Proposals
+*Goal: Eliminate repetitive manual tasks and inspire new content.*
+
+*   **Archive-Based Essay Proposals**: In the admin panel, the AI analyzes Archive nodes to propose new Essay topics, ensuring a strong connection between historical research and contemporary critique.
+*   **Newsletter "Review & Send"**: A pre-formatted newsletter draft generated with every rebuild. The editor retains full control to review, edit, and trigger the final send.
+*   **AI Proofreader & Tone Checker**: Final "Bauhausian Check" for structural clarity and sophisticated tone.
+
+## 🔍 4. Next-Gen reader Experience
+*Goal: Engagement through innovation.*
+
+*   **Internal RAG (Admin-Only Search)**: A powerful search interface for the Admin panel using Retrieval-Augmented Generation. Ask questions to your own knowledge base to find hidden connections.
+*   **Dynamic Theming**: Color palettes that shift based on the `Theme` of the active article.
+
+---
+*Vision: Sophistication through structural automation.*

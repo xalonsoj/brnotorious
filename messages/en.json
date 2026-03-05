@@ -1,0 +1,23 @@
+{
+    "Index": {
+        "title": "Urban Cultural Artifacts",
+        "description": "Designed in Brno. Crafted for the global nomad. Our prints and apparel celebrate the brutalist beauty and modernist soul of our city.",
+        "explore": "Explore Collection"
+    },
+    "Navigation": {
+        "shop": "Shop",
+        "prints": "Prints",
+        "apparel": "Apparel",
+        "journal": "Journal",
+        "story": "Story",
+        "cart": "Cart"
+    },
+    "Cart": {
+        "title": "Your Cart",
+        "empty": "Your cart is empty.",
+        "checkout": "Checkout",
+        "remove": "Remove",
+        "total": "Total",
+        "continue_shopping": "Continue Shopping"
+    }
+}

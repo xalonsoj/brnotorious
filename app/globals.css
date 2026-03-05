@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --surface: #f4f4f5;
+  --foreground: #1f2937;
+}
+
+[class~="dark"] {
+  --background: #121212;
+  --surface: #1e1e1e;
+  --foreground: #f3f4f6;
+}
+
+@layer base {
+  body {
+    @apply bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: #475569
+  }
+
+  .paper-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC0ZLoPpBSotqB0TFMna1B0lsPOGKASyzFqavkVCaT8_MvQVkwJWhm0W93fMwCkul4epHpYyeR4C6Yk5xI0FF2JN2d65nXwPkRv1zLIy83mEuGr3CBdNUNjuI3XkqOk8qZHE4Mvhkt-tLk3KlQWVEyJPuH9U8liGZXFBJkjvld8ZWrRBXFTgnBmuXHfFABuaMDEusN7IeC7hTwjBvbgsoJSaHW9I1p5YZ8uBSrgGzkx7evrt8kSOYrD1YWx6GW9H_n0-W6pwyMaSRU)
+  }
+
+  .asym-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .asym-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .asym-item-large {
+    grid-column: span 2;
+    grid-row: span 2
+  }
+
+  .asym-item-tall {
+    grid-column: span 1;
+    grid-row: span 2
+  }
+
+  .asym-item-wide {
+    grid-column: span 2;
+    grid-row: span 1
+  }
+}
