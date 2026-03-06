@@ -10,7 +10,7 @@ export default function StoryPage() {
                         Our Vision
                     </h3>
                     <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-light mb-8">
-                        Founded in the heart of Moravia, Brnotorious was born from a desire to celebrate the unique character of Brno. We believe that urban culture isn't just about buildings; it's about the stories, the people, and the distinct "State of Mind" that defines our city.
+                        Founded in the heart of Moravia, Brnotorious was born from a desire to celebrate the unique character of Brno. We believe that urban culture isn&apos;t just about buildings; it&apos;s about the stories, the people, and the distinct &quot;State of Mind&quot; that defines our city.
                     </p>
                     <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-light">
                         Every product in our collection is a piece of Brno. Designed locally, produced with care, and meant to be worn or displayed with pride.

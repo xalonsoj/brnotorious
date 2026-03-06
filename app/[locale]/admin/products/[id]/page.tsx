@@ -11,7 +11,8 @@ import {
     Save,
     ArrowLeft,
     Image as ImageIcon,
-    Trash2
+    Trash2,
+    Plus
 } from 'lucide-react';
 import Link from 'next/link';
 import { db } from '@/lib/firebase';

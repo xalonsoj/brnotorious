@@ -4,9 +4,9 @@ import { getMessages } from 'next-intl/server';
 import { AuthProvider } from "@/context/AuthContext";
 import Navbar from "@/components/Navbar";
 import CartDrawer from "@/components/CartDrawer";
+import CartSync from "@/components/CartSync";
 import Footer from "@/components/Footer";
 import "../globals.css";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +29,7 @@ export default async function LocaleLayout({
                 <NextIntlClientProvider messages={messages} locale={locale}>
                     <AuthProvider>
                         <Navbar />
+                        <CartSync />
                         <CartDrawer />
                         <main className="min-h-screen">
                             {children}

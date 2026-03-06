@@ -7,7 +7,7 @@ export default function JournalPage() {
                         Journal
                     </h1>
                     <p className="text-2xl text-gray-500 max-w-2xl font-light">
-                        Chronicles of Brno's culture, design updates, and artist spotlights.
+                        Chronicles of Brno&apos;s culture, design updates, and artist spotlights.
                     </p>
                 </header>
 

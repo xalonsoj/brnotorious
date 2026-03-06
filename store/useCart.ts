@@ -7,6 +7,7 @@ interface CartStore {
     addToCart: (product: Product, variant?: ProductVariant) => void;
     removeFromCart: (productId: string, variantId?: string) => void;
     updateQuantity: (productId: string, quantity: number, variantId?: string) => void;
+    setItems: (items: CartItem[]) => void;
     clearCart: () => void;
     totalItems: () => number;
     totalPrice: () => number;
@@ -15,7 +16,7 @@ interface CartStore {
 export const useCart = create<CartStore>()(
     persist(
         (set, get) => ({
-            items: [],
+            items: [] as CartItem[],
             addToCart: (product, variant) => {
                 const items = get().items;
                 const existingItem = items.find(
@@ -52,6 +53,7 @@ export const useCart = create<CartStore>()(
                     ).filter(item => item.quantity > 0),
                 });
             },
+            setItems: (items) => set({ items }),
             clearCart: () => set({ items: [] }),
             totalItems: () => get().items.reduce((acc, item) => acc + item.quantity, 0),
             totalPrice: () =>

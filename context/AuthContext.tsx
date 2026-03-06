@@ -7,7 +7,7 @@ import {
     signOut as firebaseSignOut
 } from 'firebase/auth';
 import { auth, db } from '@/lib/firebase';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firestore';
 
 interface AuthContextType {
     user: User | null;
@@ -45,11 +45,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                     await setDoc(userDocRef, {
                         uid: user.uid,
                         email: user.email,
-                        displayName: user.displayName,
-                        photoURL: user.photoURL,
+                        displayName: user.displayName || '',
+                        photoURL: user.photoURL || '',
                         role: idTokenResult.claims.admin ? 'admin' : 'customer',
-                        createdAt: new Date().toISOString(),
+                        createdAt: serverTimestamp(),
+                        updatedAt: serverTimestamp(),
                     }, { merge: true });
+                } else {
+                    // Update last login
+                    await updateDoc(userDocRef, {
+                        updatedAt: serverTimestamp()
+                    });
                 }
             } else {
                 setUser(null);

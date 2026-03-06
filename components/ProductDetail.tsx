@@ -93,7 +93,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                 <div className="mt-20 pt-12 border-t border-muted">
                     <h3 className="text-xs font-black uppercase tracking-[0.3em] mb-6 opacity-40">The Story Behind</h3>
                     <p className="text-sm italic leading-loose opacity-60 font-medium">
-                        "{product.designStory[locale]}"
+                        &quot;{product.designStory[locale]}&quot;
                     </p>
                 </div>
             </div>

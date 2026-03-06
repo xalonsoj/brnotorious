@@ -41,7 +41,7 @@ export default function Story() {
                                 </div>
                                 <div className="bg-white dark:bg-gray-800 p-4 md:p-8 rounded-sm md:rounded-lg shadow-xl md:shadow-2xl border-t-2 md:border-t-4 border-black dark:border-white transition-colors">
                                     <p className="font-serif italic text-sm md:text-xl text-center text-gray-800 dark:text-gray-200 leading-relaxed transition-colors">
-                                        "Every corner tells a story..."
+                                        &quot;Every corner tells a story...&quot;
                                     </p>
                                 </div>
                             </div>
