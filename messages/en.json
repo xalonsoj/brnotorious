@@ -57,5 +57,25 @@
         "revenue": "Total Revenue",
         "active_orders": "Active Orders",
         "realtime": "Realtime"
+    },
+    "Products": {
+        "title": "Product Management",
+        "add_new": "Add New Product",
+        "edit": "Edit Product",
+        "name": "Product Name",
+        "description": "Description",
+        "price": "Price (CZK)",
+        "stock": "Stock Quantity",
+        "category": "Category",
+        "images": "Product Images",
+        "upload": "Upload Images",
+        "save": "Save Product",
+        "cancel": "Cancel",
+        "success_add": "Product added successfully",
+        "success_update": "Product updated successfully",
+        "error_save": "Error saving product",
+        "featured": "Featured Product",
+        "delete": "Delete Product",
+        "confirm_delete": "Are you sure you want to delete this product?"
     }
 }

@@ -1,29 +1,45 @@
 'use client';
 
-import { useAuth } from '@/context/AuthContext';
-import { useLocale } from 'next-intl';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
-import { LayoutDashboard, ShoppingCart, Users, Package, TrendingUp, Settings } from 'lucide-react';
+import { useAuth } from '@/context/AuthContext';
+import { LayoutDashboard, ShoppingCart, Users, Package, TrendingUp, Settings, Loader2 } from 'lucide-react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { getProducts } from '@/lib/products';
 
 export default function AdminDashboard() {
-    const { user, loading, isAdmin } = useAuth();
+    const { user, loading: authLoading, isAdmin } = useAuth();
     const locale = useLocale();
     const router = useRouter();
     const t = useTranslations('Admin');
+    const [productCount, setProductCount] = useState(0);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (!loading && (!user || !isAdmin)) {
+        if (!authLoading && (!user || !isAdmin)) {
             router.push(`/${locale}`);
+            return;
         }
-    }, [user, loading, isAdmin, locale, router]);
 
-    if (loading) {
+        async function fetchData() {
+            try {
+                const products = await getProducts();
+                setProductCount(products.length);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        if (isAdmin) fetchData();
+    }, [user, authLoading, isAdmin, locale, router]);
+
+    if (authLoading || loading) {
         return (
             <div className="min-h-screen flex items-center justify-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-black"></div>
+                <Loader2 className="animate-spin h-8 w-8 text-black dark:text-white" />
             </div>
         );
     }
@@ -34,7 +50,7 @@ export default function AdminDashboard() {
         { label: t('revenue'), value: 'CZK 0.00', icon: TrendingUp, color: 'text-green-500' },
         { label: t('active_orders'), value: '0', icon: ShoppingCart, color: 'text-blue-500' },
         { label: t('customers'), value: '1', icon: Users, color: 'text-purple-500' },
-        { label: t('products'), value: '12', icon: Package, color: 'text-orange-500' },
+        { label: t('products'), value: productCount.toString(), icon: Package, color: 'text-orange-500' },
     ];
 
     return (
@@ -68,7 +84,7 @@ export default function AdminDashboard() {
                         <h2 className="text-xs font-bold uppercase tracking-[0.2em] mb-6">{t('quick_actions')}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <Link
-                                href={`/${locale}/admin/products/new`}
+                                href={`/${locale}/admin/products`}
                                 className="group bg-black dark:bg-white text-white dark:text-black p-8 flex flex-col justify-between h-48 hover:opacity-90 transition-opacity"
                             >
                                 <Package className="w-8 h-8" />

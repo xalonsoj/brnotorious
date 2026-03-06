@@ -57,5 +57,25 @@
         "revenue": "Celkový Obrat",
         "active_orders": "Aktivní Objednávky",
         "realtime": "Realtime"
+    },
+    "Products": {
+        "title": "Správa produktů",
+        "add_new": "Přidat nový produkt",
+        "edit": "Upravit produkt",
+        "name": "Název produktu",
+        "description": "Popis",
+        "price": "Cena (CZK)",
+        "stock": "Množství na skladě",
+        "category": "Kategorie",
+        "images": "Obrázky produktu",
+        "upload": "Nahrát obrázky",
+        "save": "Uložit produkt",
+        "cancel": "Zrušit",
+        "success_add": "Produkt byl úspěšně přidán",
+        "success_update": "Produkt byl úspěšně upraven",
+        "error_save": "Chyba při ukládání produktu",
+        "featured": "Doporučený produkt",
+        "delete": "Smazat produkt",
+        "confirm_delete": "Opravdu chcete tento produkt smazat?"
     }
 }
